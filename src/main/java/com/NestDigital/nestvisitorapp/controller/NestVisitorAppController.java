@@ -3,10 +3,7 @@ package com.NestDigital.nestvisitorapp.controller;
 import com.NestDigital.nestvisitorapp.model.EmployeeModel;
 import com.NestDigital.nestvisitorapp.model.dao.EmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class NestVisitorAppController {
@@ -21,5 +18,11 @@ public class NestVisitorAppController {
         dao.save(employee);
         return  "employee added successfully";
     }
-
+//   delete employee
+    @CrossOrigin(origins = "*")
+    @DeleteMapping("/deleteemployee/{id}")
+    public String deleteemployee(@PathVariable int id){
+        dao.deleteById(id);
+        return "deleted successfully";
+    }
 }
