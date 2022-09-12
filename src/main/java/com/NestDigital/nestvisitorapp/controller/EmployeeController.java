@@ -59,10 +59,10 @@ public class EmployeeController {
     public String login(@RequestBody EmployeeModel employee){
 
         if (dao.login(employee.getUsername(),employee.getPassword()).size()>0){
-            return "Succesfull login";
+            return "{status: success}";
         }
         else{
-            return  "invalid credentials";
+            return  "{status:invalid}";
         }
     }
 }
