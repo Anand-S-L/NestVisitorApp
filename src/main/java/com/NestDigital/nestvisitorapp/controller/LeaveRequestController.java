@@ -28,6 +28,14 @@ public class LeaveRequestController {
     public List<LeaveRequestModel> viewleaverequests(){
         return (List<LeaveRequestModel>) dao.findAll();
     }
+//     leave action / update status
+    @CrossOrigin(origins = "*")
+    @PostMapping("/updateleavestatus")
+    public String updateleavestatus(@RequestBody LeaveRequestModel request){
+        dao.updateleavestatus(request.getStatus(), request.getEmployeeid());
+        return "leave status updated successfully";
+    }
+
 
 
 }
