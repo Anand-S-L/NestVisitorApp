@@ -53,5 +53,16 @@ public class EmployeeController {
 
         return dao.search(employee.getId(),employee.getEmploeecode(),employee.getPhoneno(),employee.getPassword(),employee.getUsername(),employee.getDesignation(),employee.getName());
   }
+// login
+    @CrossOrigin(origins = "*")
+    @GetMapping("/login")
+    public String login(@RequestBody EmployeeModel employee){
 
+        if (dao.login(employee.getUsername(),employee.getPassword()).size()>0){
+            return "Succesfull login";
+        }
+        else{
+            return  "invalid credentials";
+        }
+    }
 }

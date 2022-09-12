@@ -18,4 +18,8 @@ public interface EmployeeDao extends CrudRepository<EmployeeModel,Integer> {
 //    Search
     @Query(value = "SELECT * FROM `employees` WHERE id=?1 || emploeecode=?2 || phoneno=?3 || password=?4 || username=?5 || designation=?6 ||name=?7", nativeQuery = true)
     List<EmployeeModel> search(int id,String employeecode,String phoneno,String password,String username,String designatiom ,String name);
+
+//    login
+    @Query(value ="SELECT `id`, `designation`, `emploeecode`, `name`, `password`, `phoneno`, `username` FROM `employees` WHERE `username`=?1 AND `password`=?2" ,nativeQuery = true)
+    public List<EmployeeModel> login(String username,String password);
 }
