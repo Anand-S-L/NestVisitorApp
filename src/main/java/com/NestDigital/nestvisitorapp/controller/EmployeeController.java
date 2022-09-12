@@ -7,6 +7,7 @@ package com.NestDigital.nestvisitorapp.controller;
         import org.springframework.web.bind.annotation.*;
 
         import java.util.List;
+        import java.util.Optional;
 
 @RestController
 public class EmployeeController {
@@ -44,5 +45,13 @@ public class EmployeeController {
         dao.updateemployee(employee.getDesignation(),employee.getEmploeecode(),employee.getName(),employee.getPassword(),employee.getPhoneno(),employee.getUsername(),employee.getId());
         return "updated successfully";
     }
+
+//    Search employee
+  @CrossOrigin(origins = "*")
+  @GetMapping("/searchemployees")
+  public List<EmployeeModel> searchemployees(@RequestBody EmployeeModel employee){
+
+        return dao.search(employee.getId(),employee.getEmploeecode(),employee.getPhoneno(),employee.getPassword(),employee.getUsername(),employee.getDesignation(),employee.getName());
+  }
 
 }
