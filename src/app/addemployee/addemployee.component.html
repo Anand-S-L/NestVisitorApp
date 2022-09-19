@@ -1,0 +1,46 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+              
+                     <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="form-label"> Name</label>
+                    <input [(ngModel)]="name" type="text" class="form-control">
+                </div>
+
+               
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="form-label">emploeecode </label>
+                    <input [(ngModel)]="emploeecode"  type="text" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="form-label">designation</label>
+                    <input [(ngModel)]="designation"   type="text" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="form-label">phoneno</label>
+                    <input [(ngModel)]="phoneno" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="form-label">username</label>
+                    <input [(ngModel)]="username"  type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="form-label">Password</label>
+                    <input [(ngModel)]="password"  type="password" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="valueAdd()"  class="btn btn-primary">Add</button>
+                </div>
+              
+            </div>
+
+
+        </div>
+    </div>
+</div>

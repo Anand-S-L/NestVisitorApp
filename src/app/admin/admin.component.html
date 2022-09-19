@@ -1,0 +1,36 @@
+
+<div  class="container">
+    <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+  
+        <div class="row g-3">
+          <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <h1 style="color: black;">Admin Login </h1>
+          </div>
+        </div>
+  
+  
+        <div class="row g-3">
+          <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <label  for="exampleFormControlInput1" class="form-label">UserName</label>
+              <input [(ngModel)]="username" type="text" class="form-control" name="username" placeholder="Enter username" >
+          </div>
+          <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input [(ngModel)]="password"  type="password" class="form-control" name="password" placeholder="Enter Password">
+          </div>
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <button (click)="readValue()" class="btn btn-primary">login </button>
+          </div>
+        </div><br>
+        <div class="row g-3">
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <a href="/employeelogin">Employees click here</a>
+          </div>
+        </div>
+       
+  
+      </div>
+    </div>
+  </div>
+  

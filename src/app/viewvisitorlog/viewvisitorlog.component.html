@@ -1,0 +1,29 @@
+<app-adminnavbar></app-adminnavbar>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">address</th>
+        <th scope="col">place</th>
+        <th scope="col">whomtomeet</th>
+        <th scope="col">mobile</th>
+        <th scope="col">logintime</th>
+        <th scope="col">logouttime</th>
+        <th scope="col">visitpurpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of data">
+       
+        <td>{{i.name}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.place}}</td>
+        <td>{{i.whomtomeet}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.logintime}}</td>
+        <td>{{i.logouttime}}</td>
+        <td>{{i.visitpurpose}}</td>
+
+      </tr>
+    </tbody>
+  </table>

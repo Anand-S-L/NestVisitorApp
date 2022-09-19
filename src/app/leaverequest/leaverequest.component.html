@@ -1,0 +1,25 @@
+<app-adminnavbar></app-adminnavbar>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">employeeid</th>
+        <th scope="col">dateofapplication</th>
+        <th scope="col">leavedate</th>
+        <th scope="col">status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of data">
+       
+        <td>{{i.employeeid}}</td>
+        <td>{{i.dateofapplication}}</td>
+        <td>{{i.leavedate}}</td>
+        <td *ngIf="i.status==1"> Approved    </td>
+        <td *ngIf="i.status==-1"> Rejected    </td>
+
+        <td *ngIf="i.status==0"> <button (click)="LeaveAction(i.id,1)" class="btn btn-success">Approve</button> &nbsp;&nbsp;  <button (click)="LeaveAction(i.id,-1)" class="btn btn-danger">Reject</button> </td>
+
+      </tr>
+    </tbody>
+  </table>

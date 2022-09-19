@@ -1,0 +1,54 @@
+<app-adminnavbar></app-adminnavbar>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <form class="d-flex" role="search">
+                        <input [(ngModel)]="emploeecode" name="emploeecode" class="form-control me-2" type="search" placeholder="Search by id" aria-label="Search">
+                        <button (click)="search()" class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+
+
+                </div>
+            </div>
+            <br>
+            
+
+            <div  class="row g-3">
+
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Name</span>
+                    <span class="input-group-text" id="addon-wrapping">{{employeedetails[0].name}}</span>
+                </div>
+
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Employee Code</span>
+                    <span class="input-group-text" id="addon-wrapping">{{employeedetails[0].emploeecode}}</span>
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Designation</span>
+                    <span class="input-group-text" id="addon-wrapping">{{employeedetails[0].designation}}</span>
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Phone no</span>
+                    <span class="input-group-text" id="addon-wrapping">{{employeedetails[0].phoneno}}</span>
+                </div>
+                
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">username</span>
+                    <span class="input-group-text" id="addon-wrapping">{{employeedetails[0].username}}</span>
+                </div>
+            
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
