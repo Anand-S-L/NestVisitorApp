@@ -42,4 +42,8 @@ export class ApiService {
     return this.http.post("http://localhost:8080/searchemployees",data)
   }
 
+  singleemplog=(data:any)=>{
+    return this.http.post("http://localhost:8080/viewsingle",data)
+  }
+
 }

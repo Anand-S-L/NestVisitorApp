@@ -23,9 +23,14 @@ export class LeaverequestApplyComponent implements OnInit {
     let data={"leavedate":this.leaveDate,"employeeid":this.empId}
     this.api.leaveApply(data).subscribe(
       (Response)=>{
+       
         console.log(Response)
       }
+      
     )
+    
+    this.leaveDate=""
+   
 
   }
 

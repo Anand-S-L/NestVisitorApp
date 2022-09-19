@@ -1,0 +1,20 @@
+<app-employee-navbar></app-employee-navbar>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">employeeid</th>
+        <th scope="col">employeelogin</th>
+        <th scope="col">employeelogout</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of data">
+       
+        <td>{{i.employeeid}}</td>
+        <td>{{i.employeelogin}}</td>
+        <td>{{i.employeelogout}}</td>
+        
+      </tr>
+    </tbody>
+  </table>

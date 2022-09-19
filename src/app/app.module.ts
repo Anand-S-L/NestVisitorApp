@@ -19,6 +19,7 @@ import { EmployeeLeaveStatusComponent } from './employee-leave-status/employee-l
 import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
 import { SearchemployeeComponent } from './searchemployee/searchemployee.component';
 import { EditemployeeComponent } from './editemployee/editemployee.component';
+import { SingleemployeelogComponent } from './singleemployeelog/singleemployeelog.component';
 
 const approutes : Routes=[
   {
@@ -67,7 +68,14 @@ const approutes : Routes=[
       component:EditemployeeComponent
     
   
-  }
+  },
+  {
+    
+    path:"singleemplog",
+    component:SingleemployeelogComponent
+  
+
+}
 
 ]
 @NgModule({
@@ -86,7 +94,8 @@ const approutes : Routes=[
     EmployeeLeaveStatusComponent,
     EmployeeNavbarComponent,
     SearchemployeeComponent,
-    EditemployeeComponent
+    EditemployeeComponent,
+    SingleemployeelogComponent
   ],
   imports: [
     BrowserModule,
